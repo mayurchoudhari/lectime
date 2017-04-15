@@ -8,12 +8,18 @@ import { AdMob } from '@ionic-native/admob';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Login } from '../pages/login/login';
+import { List } from '../pages/list/list';
+import { Calender } from '../pages/calender/calender';
+import { Entry } from '../pages/entry/entry';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    Login
+    Login,
+    List,
+    Calender,
+    Entry
   ],
   imports: [
     BrowserModule,
@@ -23,7 +29,10 @@ import { Login } from '../pages/login/login';
   entryComponents: [
     MyApp,
     HomePage,
-    Login
+    Login,
+    List,
+    Calender,
+    Entry
   ],
   providers: [
     StatusBar,

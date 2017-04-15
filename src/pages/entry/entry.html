@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>LecTime Entry</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <form (ngSubmit)="entryForm()">
+    <ion-item>
+      <ion-label floating>Lecture</ion-label>
+      <ion-input type="Lecture" [(ngModel)]="form.lecture" name="lecture"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Day</ion-label>
+      <ion-select [(ngModel)]="form.days" multiple="true">
+        <ion-option>Sunday</ion-option>
+        <ion-option>Monday</ion-option>
+        <ion-option>Tuesday</ion-option>
+        <ion-option>Wednesday</ion-option>
+        <ion-option>Thursday</ion-option>
+        <ion-option>Friday</ion-option>
+        <ion-option>Saturday</ion-option>
+      </ion-select>
+    </ion-item>
+    <button ion-button type="submit" block>Save</button>
+  </form>
+</ion-content>

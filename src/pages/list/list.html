@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Lecture TimeTable
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="addItem()">
+        <ion-icon name="add" class="dbl"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of currentItems">
+      <button ion-item>
+        <h2>{{item.lecture}}</h2>
+        <p>{{item.days}}</p>
+        <ion-note item-right *ngIf="item.note">{{item.note}}</ion-note>
+      </button>
+      <ion-item-options>
+        <button ion-button color="light" (click)="openItem(item)">
+          <ion-icon name="information-circle" class="dbl blue"></ion-icon>
+        </button>
+        <button ion-button color="light" (click)="deleteItem(item)">
+          <ion-icon name="trash" class="dbl red"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

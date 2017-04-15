@@ -1,0 +1,14 @@
+page-list {
+  ion-icon {
+    &.dbl {
+      font-size: 2.4em;
+      padding-bottom: 0 !important;
+    }
+    &.blue {
+      color: blue;
+    }
+    &.red {
+      color: red;
+    }
+  }
+}
